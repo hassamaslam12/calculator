@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>SUM</h2>
+    <form onsubmit="doSum(); return false">
+        num1: <input type="number" id="num1"><br>
+        num2: <input type="number" id="num2"><br>
+        <button>sum</button>
+    </form>
+    <h2 id="result"></h2><hr>
+    <h2>SUBTRACTION</h2>
+    <form onSubmit="doMinus(); return false">
+        num1: <input type="number" id="minusNum1"><br>
+        num2: <input type="number" id="minusNum2"><br>
+        <button>Subtract</button>
+    </form>
+    <h2 id="Subtract"></h2><hr>
+    <h2>Multiply</h2>
+    <form onSubmit="doMultiple(); return false">
+        num1: <input type="number" id="multipleNum1"><br>
+        num2: <input type="number" id="multipleNum2"><br>
+        <button>multiple</button>
+    </form>
+    <h2 id="multiple"></h2><hr>
+    <h2>divide</h2>
+    <form onSubmit="doDivide(); return false">
+        num1: <input type="number" id="divideNum1"><br>
+        num2: <input type="number" id="divideNum2"><br>
+        <button>divide</button>
+    </form>
+    <h2 id="divide"></h2><hr>
+    <script>
+        
+        function doSum(){
+        let num1 = +document.querySelector("#num1").value;
+        let num2 = +document.querySelector("#num2").value;
+        let result = num1 + num2
+        console.log(result)
+        document.querySelector("#result").innerHTML=result
+        }
+        function doMinus(){
+            let Num1=+document.querySelector("#minusNum1").value;
+            let Num2=+document.querySelector("#minusNum2").value;
+            let Subtract = Num1-Num2
+            document.querySelector("#Subtract").innerHTML=Subtract
+        }
+
+        function doMultiple(){
+            let Num1=+document.querySelector("#multipleNum1").value;
+            let Num2=+document.querySelector("#multipleNum2").value;
+            let multiple = Num1*Num2
+            document.querySelector("#multiple").innerHTML=multiple
+        }
+
+        function doDivide(){
+            let Num1=+document.querySelector("#divideNum1").value;
+            let Num2=+document.querySelector("#divideNum2").value;
+            let divide = Num1/Num2
+            document.querySelector("#divide").innerHTML=divide
+        }
+        </script>
+</body>
+</html>
